@@ -375,3 +375,236 @@ span p {
     border: 1px solid skyblue;
     outline: none;
 }
+
+/* =====================================================
+   RESPONSIVE: 200px se lekar bade screens tak
+   Breakpoints: 768 / 576 / 400 / 320 / 240
+   ===================================================== */
+
+body {
+    min-width: 200px;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+img { max-width: 100%; }
+
+h1, h2, p, label, a { overflow-wrap: break-word; }
+
+/* fieldset ka default min-width form ko bahar nikalta hai */
+fieldset { min-width: 0; }
+
+.forms-container {
+    height: auto;
+    min-height: 600px;
+}
+
+.input-container .input-group { min-width: 0; }
+
+.switch-btn { max-width: 100%; }
+
+.more-option {
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* ---------- Tablet / Mobile (<= 768px): stacked layout ---------- */
+@media (max-width: 768px) {
+    .auth-form { margin-top: 10px; }
+
+    .forms-container {
+        flex-direction: column;
+        min-height: 0;
+        box-shadow: 0 5px 30px 2px lightskyblue;
+    }
+
+    /* Blue panel upar, form neeche (Sign Up me bhi) */
+    .SignUp-content { order: -1; }
+
+    .SignIn-content,
+    .SignUp-content {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 25px 20px;
+        text-align: center;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .SignIn-form,
+    .SignUp-form {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .SignIn-form form,
+    .SignUp-form form { margin: 0; }
+
+    .SignIn-logo,
+    .SignUp-logo { justify-content: center; }
+
+    .left-content,
+    .right-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .left-2,
+    .right-2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .switch-btn {
+        min-width: 0;
+        width: 100%;
+        max-width: 240px;
+    }
+
+    .input-group input { height: 40px; }
+}
+
+/* ---------- Mobile (<= 576px) ---------- */
+@media (max-width: 576px) {
+    .input-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .SignIn-form,
+    .SignUp-form { padding: 16px; }
+
+    .SignIn-logo img,
+    .SignUp-logo img { width: 110px; }
+
+    .Submit-btn button { height: 46px; font-size: 16px; }
+
+    .icon-log { gap: 20px; font-size: 22px; }
+}
+
+/* ---------- Small mobile (<= 400px) ---------- */
+@media (max-width: 400px) {
+    body { padding: 6px; }
+
+    .SignIn-content,
+    .SignUp-content { padding: 18px 14px; }
+
+    .SignIn-form,
+    .SignUp-form { padding: 12px; }
+
+    h1 { font-size: 1.5rem; }
+    .left-1, .right-1 { font-size: 12px; }
+
+    .SignIn-form form,
+    .SignUp-form form,
+    fieldset { gap: 16px; }
+}
+
+/* ---------- Very small (<= 320px) ---------- */
+@media (max-width: 320px) {
+    h1 { font-size: 1.3rem; }
+
+    .SignIn-logo img,
+    .SignUp-logo img { width: 90px; }
+
+    .input-group label { font-size: 11px; }
+    .input-group input { height: 38px; font-size: 14px; }
+
+    .switch-btn {
+        height: auto;
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+
+    .Submit-btn button { height: 42px; font-size: 15px; }
+    .icon-log { gap: 14px; font-size: 20px; }
+}
+
+/* ---------- Tiny (<= 240px, 200px tak) ---------- */
+@media (max-width: 240px) {
+    body { padding: 3px; }
+
+    .forms-container { border-radius: 10px; }
+
+    .SignIn-content,
+    .SignUp-content {
+        padding: 12px 8px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .SignIn-form,
+    .SignUp-form { padding: 8px; }
+
+    h1 { font-size: 1.1rem; }
+    .left-2, .right-2 { font-size: 10px; }
+    .more-option { font-size: 11px; }
+
+    .divider-area span { width: 90%; }
+}
+
+
+/* =====================================================
+   FIX: blue image panel poori height le (white card ke barabar)
+   + dono panels me same margin/padding
+   ===================================================== */
+.forms-container {
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.SignIn-content,
+.SignUp-content,
+.SignIn-form,
+.SignUp-form {
+    height: auto;
+    margin: 0;
+    align-self: stretch;
+}
+
+/* Desktop / tablet landscape: side by side */
+.SignIn-content,
+.SignUp-content { padding: 30px; }
+
+.SignIn-form,
+.SignUp-form { padding: 30px; }
+
+/* Stacked layouts: padding dobara set (upar wali base rule ko override) */
+@media (max-width: 768px) {
+    .SignIn-content,
+    .SignUp-content {
+        width: 100%;
+        padding: 28px 20px;
+    }
+
+    .SignIn-form,
+    .SignUp-form {
+        width: 100%;
+        padding: 24px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .SignIn-content,
+    .SignUp-content { padding: 22px 16px; }
+
+    .SignIn-form,
+    .SignUp-form { padding: 20px 16px; }
+}
+
+@media (max-width: 400px) {
+    .SignIn-content,
+    .SignUp-content { padding: 18px 14px; }
+
+    .SignIn-form,
+    .SignUp-form { padding: 16px 14px; }
+}
+
+@media (max-width: 240px) {
+    .SignIn-content,
+    .SignUp-content { padding: 12px 8px; }
+
+    .SignIn-form,
+    .SignUp-form { padding: 10px 8px; }
+}
