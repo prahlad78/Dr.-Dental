@@ -1,0 +1,377 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.auth-form {
+    margin-top: 75px;
+}
+
+#show-signin,
+#show-signup {
+    display: none;
+}
+
+#SignIn-form {
+    display: block;
+}
+
+#SignUp-form {
+    display: none;
+}
+
+#show-signup:checked~#SignIn-form {
+    display: none;
+}
+
+#show-signup:checked~#SignUp-form {
+    display: block;
+}
+
+#show-signin:checked~#SignIn-form {
+    display: block;
+}
+
+#show-signin:checked~#SignUp-form {
+    display: none;
+}
+
+.switch-btn,
+.switch-link {
+    cursor: pointer;
+}
+
+.forms-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+}
+
+.forms-container {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 75px 2px lightskyblue;
+}
+
+.SignIn-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(assets/img/form-image);
+    width: 40%;
+    height: 100%;
+    line-height: 1.5;
+    margin: auto;
+    padding: 25px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.SignIn-logo {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+}
+
+.SignIn-logo img {
+    display: block;
+    width: 150px;
+}
+
+.left-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    text-align: left;
+    gap: 10px;
+}
+
+.left-1 {
+    font-size: 14px;
+}
+
+.left-2 {
+    width: 80%;
+    font-size: 12px;
+    text-align: justify;
+}
+
+.switch-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 25px;
+    min-width: 180px;
+    height: 45px;
+    border: 1px solid skyblue;
+    border-radius: 50px;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.switch-btn:hover {
+    background-color: skyblue;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(135, 206, 235, 0.4);
+}
+
+.switch-btn:active {
+    transform: translateY(0);
+}
+
+
+.SignIn-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    padding: 25px;
+    margin: auto;
+}
+
+.SignIn-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 25px;
+    width: 100%;
+    margin: 10px;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    border: none;
+    width: 100%;
+}
+
+.input-group {
+    width: 100%;
+}
+
+.input-group label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    padding-inline: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    outline: none;
+}
+
+.more-option {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.more-option label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.more-option input {
+    width: 14px;
+    height: 14px;
+}
+
+.more-option a {
+    text-decoration: none;
+    color: blue;
+}
+
+.Submit-btn {
+    width: 100%;
+}
+
+.Submit-btn button {
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: skyblue;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+.divider-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider-area span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    width: 75%;
+    height: 1px;
+}
+
+span p {
+    background-color: white;
+    padding-inline: 5px;
+}
+
+.icon-log {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    align-items: center;
+    width: 100%;
+    font-size: 25px;
+}
+
+.other-option {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.switch-link {
+    display: inline-block;
+    margin-left: 5px;
+    color: #0077ff;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.switch-link:hover {
+    color: #0056c7;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+.SignUp-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    padding: 25px;
+    margin: auto;
+}
+
+.SignUp-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 25px;
+    width: 100%;
+    margin: 10px;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+}
+
+.SignUp-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    background-image: url(assets/img/form-image);
+    width: 40%;
+    height: 100%;
+    line-height: 1.5;
+    margin: auto;
+    padding: 25px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.SignUp-logo {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+}
+
+.SignUp-logo img {
+    display: block;
+    width: 150px;
+}
+
+.right-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.right-1 {
+    width: 100%;
+    font-size: 14px;
+}
+
+.right-2 {
+    width: 100%;
+    font-size: 12px;
+}
+
+.SignUp-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.SignUp-btn button {
+    background: transparent;
+    padding: 20px 15px;
+    width: 65%;
+    border-radius: 50px;
+    border: 1px solid skyblue;
+    outline: none;
+}

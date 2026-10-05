@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+    <input type="radio" name="form-change" id="show-signin" checked>
+    <input type="radio" name="form-change" id="show-signup">
+
+    <!-- SIGN IN FORM -->
+
+    <main class="auth-form auth-wrapper" id="SignIn-form">
+      <section class="forms-section">
+        <div class="forms-container">
+          <div class="SignIn-content">
+            <div class="SignIn-logo">
+              <a href="index.html">
+                <img src="assets/img/footer-logo.png" alt="" />
+              </a>
+            </div>
+
+            <div class="left-content">
+              <p class="left-1">WELCOME BACK</p>
+              <h1>
+                Sign in to <br />
+                Continue
+              </h1>
+              <p class="left-2">
+                Access your account to manage <br> your profile, order and
+                preferences.
+              </p>
+              <div class="switch-btn">
+                <label for="show-signup" >Create New Account</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="SignIn-form">
+            <form action="./php" method="post">
+              <header>
+                <h1>Sign In</h1>
+                <p>Welcome back! Please sign in to continue.</p>
+              </header>
+
+              <fieldset>
+                <div class="input-group">
+                  <label for="email">Email</label><br />
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="password">Password</label><br />
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                  />
+                </div>
+                <div class="more-option">
+                  <label for="remember">
+                    <input type="checkbox" name="remember" id="remember" />
+                    <span>Remember me</span>
+                  </label>
+                  <a href="#" class="switch-link">Forget password?</a>
+                </div>
+                <div class="Submit-btn">
+                  <button type="submit">Sign In</button>
+                </div>
+                <div class="divider-area">
+                  <span><p>or</p></span>
+                </div>
+                <div class="icon-log">
+                  <i class="fa-brands fa-google"></i>
+                  <i class="fa-solid fa-envelope"></i>
+                  <i class="fa-solid fa-mobile"></i>
+                </div>
+                <div class="other-option">
+                  <p>Don't have an account? &nbsp;<label for="show-signup" class="switch-link">Sign up</label></p>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- SIGN UP FORM -->
+
+    <main class="auth-form auth-wrapper" id="SignUp-form">
+      <section class="forms-section">
+        <div class="forms-container">
+          <div class="SignUp-form">
+            <form action="./action" method="post">
+              <header>
+                <h1>Sign Up</h1>
+                <p>Create your account.It's quick and easy.</p>
+              </header>
+
+              <fieldset>
+                <div class="input-container">
+                  <div class="input-group">
+                    <label for="name">Name</label><br>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Enter your name"
+                      required
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label for="tel">Mobile</label><br>
+                    <input
+                      type="tel"
+                      id="tel"
+                      name="tel"
+                      placeholder="Enter your mobile"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="email">Email</label><br>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="password">Password</label><br>
+                  <input
+                    type="text"
+                    id="password"
+                    name="password"
+                    placeholder="Password"
+                    required
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="name">Confirm Password</label><br>
+                  <input
+                    type="text"
+                    id="Confirm"
+                    name="confirm"
+                    placeholder="Confirm Password"
+                    required
+                  />
+                </div>
+                <div class="Submit-btn">
+                  <button type="submit">Create Account</button>
+                </div>
+                <div class="divider-area">
+                  <span><p>or</p></span>
+                </div>
+                <div class="icon-log">
+                  <i class="fa-brands fa-google"></i>
+                  <i class="fa-solid fa-envelope"></i>
+                  <i class="fa-solid fa-mobile"></i>
+                </div>
+                <div class="other-option">
+                  <p>Allready have an account? <label for="show-signin" class="switch-link">Sign In</label></p>
+                </div>
+              </fieldset>
+              </div>
+
+              <div class="SignUp-content">
+                <div class="SignUp-logo">
+                  <a href="index.html">
+                <img src="assets/img/footer-logo.png" alt="" />
+              </a>
+                </div>
+
+                <div class="right-content">
+                  <p class="right-1">HELLO THERE</p>
+                  <h1>
+                    Create new account
+                  </h1>
+                  <p class="right-2">
+                    Access your account to manage <br>your profile, order and
+                    preferences.
+                  </p>
+                  <div class="switch-btn">
+                    <label for="show-signin">I Have An Account</label>
+                  </div>
+                </div>
+              </div>
+            </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
